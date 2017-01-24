@@ -8,10 +8,8 @@ class PostsController < ApplicationController
 	end 
 
 	def create
-		@post = current_user.posts.new(post_params)
-		if @post.save
-			redirect_to posts_path
-		end
+		@post = Post.create(post_params)
+		redirect_to posts_path
 	end
 
 	def post_params  
