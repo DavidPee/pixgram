@@ -1,0 +1,19 @@
+<%=form_for @post do |f| %>
+
+	<div>
+		<%= f.label :image %>
+		<%= f.file_field :image, multiple: true, class: "form-control" %>
+	</div>
+	<br>
+
+	<div>
+		<%= f.label :caption %>
+		<%= f.text_area :caption, class: "form-control" %>
+	</div>
+	<br>
+
+	<hr>
+	<div>
+		<%= f.submit "Submit", class: "btn btn-primary, col-sm-12" %>
+	</div>
+<% end %>
